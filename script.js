@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const languageButtons = document.querySelectorAll('.language-switch button');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
 
     // Theme toggle
     themeToggle.addEventListener('click', () => {
@@ -54,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 current = section.getAttribute('id');
             }
         });
-
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href').slice(1) === current) {
@@ -64,15 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 
     window.addEventListener('scroll', handleScroll);
-});
 
-async function setLanguage(lang) {
-    const response = await fetch(`locales/${lang}.json`);
-    const translations = await response.json();
-    document.documentElement.lang = lang;
-    
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        element.textContent = translations[key];
-    });
-}
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', () => {
+        nav.classList
