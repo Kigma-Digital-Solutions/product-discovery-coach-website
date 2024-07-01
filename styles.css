@@ -11,6 +11,17 @@
     --primary-color: #4aa3df;
     --secondary-color: #34495e;
 }
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 16px;
+    }
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -18,15 +29,11 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 header {
     background-color: var(--secondary-color);
