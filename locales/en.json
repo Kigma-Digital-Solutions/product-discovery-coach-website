@@ -1,0 +1,20 @@
+{
+    "nav.home": "Home",
+    "nav.services": "Services",
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "home.title": "Joost Kamstra",
+    "home.subtitle": "Product Discovery Coach",
+    "home.intro": "As an experienced Product Discovery Coach, I empower organizations to create products that truly matter. With over a decade of experience in leading product companies, I help teams transform their product discovery process, resulting in increased value creation and reduced waste.",
+    "services.title": "Services",
+    "services.workshop": "Team Workshops",
+    "services.design": "Discovery Process Design",
+    "services.coaching": "Hands-on Coaching",
+    "about.title": "About Me",
+    "about.description": "With extensive experience at companies like KPN, DPG Media, Ahold-Delhaize, and Sissy-Boy, I bring a wealth of knowledge in product management and coaching to help your team excel in product discovery.",
+    "contact.title": "Contact",
+    "contact.cta": "Ready to transform your product discovery?",
+    "contact.button": "Contact Me",
+    "footer.rights": "All rights reserved.",
+    "footer.privacy": "Privacy Policy"
+}
