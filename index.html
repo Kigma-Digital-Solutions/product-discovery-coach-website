@@ -13,9 +13,10 @@
     <link rel="canonical" href="https://www.joostkamstra.com/">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
 </head>
 <body>
+  <div class="container">
     <header role="banner">
         <nav role="navigation" aria-label="Main navigation">
             <ul>
@@ -33,17 +34,17 @@
     </header>
 
     <main role="main">
-    <section id="home" aria-labelledby="home-title" role="region">
+    <section id="home" aria-labelledby="home-title" role="region" class="fade-in">
         <h1 id="home-title" data-i18n="home.title">Joost Kamstra</h1>
         <h2 data-i18n="home.subtitle">Product Discovery Coach</h2>
         <img src="images/joost-profile.jpg" alt="Joost Kamstra" class="profile-image">
         <p data-i18n="home.intro">As an experienced Product Discovery Coach, I empower organizations to create products that truly matter. With over a decade of experience in leading product companies, I help teams transform their product discovery process, resulting in increased value creation and reduced waste.</p>
     </section>
 
-    <section id="services" aria-labelledby="services-title" role="region">
+    <section id="services" aria-labelledby="services-title" role="region" class="fade-in">
         <h2 id="services-title" data-i18n="services.title">Services</h2>
         <p data-i18n="services.intro">I offer a range of services to help your team excel in product discovery:</p>
-        <ul role="list">
+       <ul role="list" class="grid">
             <li role="listitem">
                 <h3 data-i18n="services.workshop.title">Team Workshops</h3>
                 <p data-i18n="services.workshop.description">Immersive sessions that equip your team with practical discovery techniques, leading to immediate improvements in idea generation and validation.</p>
@@ -59,14 +60,14 @@
         </ul>
     </section>
 
-    <section id="about" aria-labelledby="about-title" role="region">
+    <section id="about" aria-labelledby="about-title" role="region" class="fade-in">
         <h2 id="about-title" data-i18n="about.title">About Me</h2>
         <p data-i18n="about.description">With extensive experience at companies like KPN, DPG Media, Ahold-Delhaize, and Sissy-Boy, I bring a wealth of knowledge in product management and coaching to help your team excel in product discovery.</p>
         <p data-i18n="about.approach">My approach is rooted in modern product management principles, focusing on creating products that are not just viable, but valuable, usable, and feasible. I believe in the power of effective discovery to drive innovation and create products that truly resonate with customers.</p>
         <p data-i18n="about.experience">My diverse background spans both B2B and B2C environments, allowing me to adapt discovery methods to various business models and customer types. Whether you're a startup or an established enterprise, I can help you navigate the complexities of product discovery and drive meaningful results.</p>
     </section>
 
-    <section id="contact" aria-labelledby="contact-title" role="region">
+    <section id="contact" aria-labelledby="contact-title" role="region" class="fade-in">
         <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
         <p data-i18n="contact.cta">Ready to transform your product discovery?</p>
         <p data-i18n="contact.description">Whether you're struggling with product-market fit, looking to innovate in a crowded market, or simply want to make your discovery process more efficient and effective, I'm here to help. Let's work together to uncover opportunities that will delight your customers and drive your business forward.</p>
@@ -81,5 +82,6 @@
         </a>
         <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
     </footer>
+</div>
 </body>
 </html>
