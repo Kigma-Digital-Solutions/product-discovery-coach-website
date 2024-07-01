@@ -26,14 +26,8 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -44,7 +38,6 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     background-color: var(--bg-color);
-    color: var(--text-color);
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -58,6 +51,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -78,7 +72,7 @@ nav ul li a:hover, nav ul li a.active,
     background-color: rgba(52, 152, 219, 0.1);
 }
 
-.language-switch button, #theme-toggle {
+.language-switch, #theme-toggle {
     background: none;
     cursor: pointer;
     margin-left: 10px;
@@ -88,14 +82,50 @@ main {
     padding: 2rem 0;
 }
 
-section {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 4rem;
+}
+
+#home h1, #home h2 {
+    margin-bottom: 1rem;
 }
 
 .profile-image {
     max-width: 300px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 a, .button {
@@ -120,23 +150,6 @@ a:hover, .button:hover {
     background-color: var(--secondary-color);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 footer {
     background-color: var(--secondary-color);
     color: #ffffff;
@@ -146,10 +159,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 0 16px;
-    }
-    
     header {
         flex-direction: column;
     }
