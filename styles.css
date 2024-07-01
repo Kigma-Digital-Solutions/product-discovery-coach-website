@@ -57,29 +57,29 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
     margin: 0 1rem;
 }
 
-nav ul li a {
+nav ul li a, .language-switch button, #theme-toggle {
     color: var(--text-color);
     text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover, nav ul li a.active,
+.language-switch button:hover, #theme-toggle:hover {
     border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
 }
 
 .language-switch button, #theme-toggle {
     background: none;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    padding: 5px 10px;
     cursor: pointer;
     margin-left: 10px;
 }
@@ -149,21 +149,21 @@ footer {
     body {
         padding: 0 16px;
     }
-
+    
     header {
         flex-direction: column;
     }
-
+    
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
+    
     nav ul li {
         margin-right: 0;
         margin-bottom: 0.5rem;
     }
-
+    
     .language-switch, #theme-toggle {
         margin-top: 1rem;
     }
