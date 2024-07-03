@@ -21,15 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleTheme() {
         const currentTheme = localStorage.getItem('theme') || 'light';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.body.dataset.theme = newTheme;
+        document.body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        console.log(`Theme switched to: ${newTheme}`);
     }
 
     themeToggle.addEventListener('click', toggleTheme);
 
     // Set initial theme based on localStorage
     const savedTheme = localStorage.getItem('theme') || 'light';
-    document.body.dataset.theme = savedTheme;
+    document.body.setAttribute('data-theme', savedTheme);
+    console.log(`Initial theme set to: ${savedTheme}`);
 
     // Language switch
     languageButtons.forEach(button => {
