@@ -18,9 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Theme toggle
-    themeToggle.addEventListener('click', () => {
-        document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+    function toggleTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.body.dataset.theme = newTheme;
+        localStorage.setItem('theme', newTheme);
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+
+    // Set initial theme based on localStorage
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.dataset.theme = savedTheme;
 
     // Language switch
     languageButtons.forEach(button => {
