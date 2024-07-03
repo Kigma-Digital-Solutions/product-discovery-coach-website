@@ -1,5 +1,4 @@
 console.log('Script loaded');
-
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const languageButtons = document.querySelectorAll('.language-switch button');
@@ -20,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial language based on browser settings
     setLanguage(navigator.language.split('-')[0]);
+
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
 
     // Fade-in effect
     const fadeElems = document.querySelectorAll('.fade-in');
@@ -60,4 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll);
+});
+
+function setLanguage(lang) {
+    // Implement this function to change the language
+    console.log('Language set to:', lang);
+    // You would typically load language-specific content here
+    // and update the text content of elements with the 'data-i18n' attribute
+}
