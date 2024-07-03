@@ -1,3 +1,5 @@
+console.log('Script loaded');
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const languageButtons = document.querySelectorAll('.language-switch button');
@@ -58,14 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    }, 100);
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Mobile menu toggle
-    menuToggle.addEventListener('click', () => {
-        nav.classList
+            if (link.getAttribute('href').slice(1) === current
