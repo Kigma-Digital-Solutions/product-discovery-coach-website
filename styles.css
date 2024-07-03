@@ -216,24 +216,4 @@ footer {
         left: 0;
         right: 0;
         background-color: var(--bg-color);
-        display: none;
-        padding: 1rem;
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .header-buttons {
-        display: flex;
-        align-items: center;
-    }
-}
+        display
