@@ -1,4 +1,29 @@
 console.log('Script loaded');
+
+// Voeg deze objecten toe aan het begin van je script
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.services": "Services",
+        "nav.about": "About",
+        "nav.contact": "Contact",
+        "home.title": "Joost Kamstra",
+        "home.subtitle": "Product Discovery Coach",
+        "home.intro": "As an experienced Product Discovery Coach, I empower organizations to create products that truly matter. With over a decade of experience in leading product companies, I help teams transform their product discovery process, resulting in increased value creation and reduced waste.",
+        // Voeg hier meer Engelse vertalingen toe
+    },
+    nl: {
+        "nav.home": "Home",
+        "nav.services": "Diensten",
+        "nav.about": "Over mij",
+        "nav.contact": "Contact",
+        "home.title": "Joost Kamstra",
+        "home.subtitle": "Product Discovery Coach",
+        "home.intro": "Als ervaren Product Discovery Coach help ik organisaties bij het creëren van producten die er echt toe doen. Met meer dan tien jaar ervaring in leidende productbedrijven, help ik teams hun product discovery proces te transformeren, wat resulteert in verhoogde waardecreatie en minder verspilling.",
+        // Voeg hier meer Nederlandse vertalingen toe
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const languageButtons = document.querySelectorAll('.language-switch button');
@@ -74,8 +99,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setLanguage(lang) {
-    // Implement this function to change the language
     console.log('Language set to:', lang);
-    // You would typically load language-specific content here
-    // and update the text content of elements with the 'data-i18n' attribute
+    
+    // Controleer of de taal bestaat in onze vertalingen
+    if (!translations[lang]) {
+        console.error(`Vertalingen voor taal "${lang}" zijn niet beschikbaar.`);
+        return;
+    }
+
+    // Update de taal voor alle elementen met een data-i18n attribuut
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        } else {
+            console.warn(`Vertaling ontbreekt voor sleutel "${key}" in taal "${lang}"`);
+        }
+    });
+
+    // Update de active state van de taalknopppen
+    document.querySelectorAll('.language-switch button').forEach(button => {
+        button.classList.toggle('active', button.id === lang);
+    });
+
+    // Optioneel: sla de taalvoorkeur op in localStorage
+    localStorage.setItem('preferredLanguage', lang);
 }
