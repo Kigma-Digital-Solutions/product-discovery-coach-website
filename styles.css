@@ -8,12 +8,14 @@
     --accent-color: #e74c3c;
 }
 
-[data-theme="dark"] {
-    --bg-color: #2c3e50;
-    --text-color: #ecf0f1;
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #2c3e50;
+        --text-color: #ecf0f1;
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --accent-color: #e74c3c;
+    }
 }
 
 .no-js .fade-in {
@@ -39,6 +41,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 header {
@@ -85,6 +90,7 @@ nav ul li a:hover, nav ul li a.active,
 
 .language-switch, #theme-toggle {
     background: none;
+    border: none;
     cursor: pointer;
     margin-left: 10px;
 }
@@ -159,8 +165,8 @@ section {
 }
 
 .fade-in {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
