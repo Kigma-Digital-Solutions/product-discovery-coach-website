@@ -1,233 +1,236 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joost Kamstra | Product Discovery Coach</title>
+    <meta name="description" content="Joost Kamstra, experienced Product Discovery Coach, empowering organizations to create products that truly matter.">
+    <meta name="keywords" content="Product Discovery, Coach, Product Management, Innovation, Agile">
+    <meta name="author" content="Joost Kamstra">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <link rel="canonical" href="https://www.joostkamstra.com/">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+</head>
+<body>
+  <div class="container">
+    <header role="banner">
+        <div class="header-content">
+            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <div class="language-switch" role="region" aria-label="Language selection">
+                    <button id="en" aria-label="Switch to English">EN</button>
+                    <button id="nl" aria-label="Switch to Dutch">NL</button>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+            </div>
+        </div>
+    </header>
 
-:root {
-    --bg-color: #f5f5f5;
-    --text-color: #333333;
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
-}
+    <main role="main">
+        <section id="home" aria-labelledby="home-title" class="fade-in">
+            <div class="home-content">
+                <h1 id="home-title" data-i18n="home.title">Joost Kamstra</h1>
+                <h2 data-i18n="home.subtitle">Product Discovery Coach</h2>
+                <img src="images/joost-profile.jpg" alt="Joost Kamstra" class="profile-image">
+                <p data-i18n="home.intro">As an experienced Product Discovery Coach, I empower organizations to create products that truly matter. With over a decade of experience in leading product companies, I help teams transform their product discovery process, resulting in increased value creation and reduced waste.</p>
+            </div>
+        </section>
 
-[data-theme="dark"] {
-    --bg-color: #2c3e50;
-    --text-color: #ecf0f1;
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
-}
+        <section id="services" aria-labelledby="services-title" class="fade-in">
+            <h2 id="services-title" data-i18n="services.title">Services</h2>
+            <p data-i18n="services.intro">I offer a range of services to help your team excel in product discovery:</p>
+            <ul class="grid">
+                <li>
+                    <h3 data-i18n="services.workshop.title">Team Workshops</h3>
+                    <p data-i18n="services.workshop.description">Immersive sessions that equip your team with practical discovery techniques, leading to immediate improvements in idea generation and validation.</p>
+                </li>
+                <li>
+                    <h3 data-i18n="services.design.title">Discovery Process Design</h3>
+                    <p data-i18n="services.design.description">Tailored discovery frameworks that fit your organization's unique context and goals, ensuring a sustainable and effective approach to product discovery.</p>
+                </li>
+                <li>
+                    <h3 data-i18n="services.coaching.title">Hands-on Coaching</h3>
+                    <p data-i18n="services.coaching.description">Direct guidance during live discovery activities, providing real-time feedback and optimization to enhance your team's skills and outcomes.</p>
+                </li>
+            </ul>
+        </section>
 
-.no-js .fade-in {
-    opacity: 1 !important;
-    transform: none !important;
-}
+        <section id="about" aria-labelledby="about-title" class="fade-in">
+            <h2 id="about-title" data-i18n="about.title">About Me</h2>
+            <p data-i18n="about.description">With extensive experience at companies like KPN, DPG Media, Ahold-Delhaize, and Sissy-Boy, I bring a wealth of knowledge in product management and coaching to help your team excel in product discovery.</p>
+            <p data-i18n="about.approach">My approach is rooted in modern product management principles, focusing on creating products that are not just viable, but valuable, usable, and feasible. I believe in the power of effective discovery to drive innovation and create products that truly resonate with customers.</p>
+            <p data-i18n="about.experience">My diverse background spans both B2B and B2C environments, allowing me to adapt discovery methods to various business models and customer types. Whether you're a startup or an established enterprise, I can help you navigate the complexities of product discovery and drive meaningful results.</p>
+        </section>
 
-html {
-    scroll-behavior: smooth;
-}
+        <section id="contact" aria-labelledby="contact-title" class="fade-in">
+            <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.cta">Ready to transform your product discovery?</p>
+            <p data-i18n="contact.description">Whether you're struggling with product-market fit, looking to innovate in a crowded market, or simply want to make your discovery process more efficient and effective, I'm here to help. Let's work together to uncover opportunities that will delight your customers and drive your business forward.</p>
+            <a href="mailto:kamstra@gmail.com" class="button" data-i18n="contact.button" aria-label="Contact Joost Kamstra via email">Contact Me</a>
+        </section>
+    </main>
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0;
-    padding: 0;
-}
+    <footer role="contentinfo">
+        <p>&copy; 2024 Joost Kamstra. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <a href="https://www.linkedin.com/in/joostkamstra" target="_blank" rel="noopener noreferrer" aria-label="Visit Joost Kamstra's LinkedIn profile">
+            LinkedIn
+        </a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+    </footer>
+  </div>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+  <script>
+  const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.services": "Services",
+        "nav.about": "About",
+        "nav.contact": "Contact",
+        "home.title": "Joost Kamstra",
+        "home.subtitle": "Product Discovery Coach",
+        "home.intro": "As an experienced Product Discovery Coach, I empower organizations to create products that truly matter. With over a decade of experience in leading product companies, I help teams transform their product discovery process, resulting in increased value creation and reduced waste.",
+        "services.title": "Services",
+        "services.intro": "I offer a range of services to help your team excel in product discovery:",
+        "services.workshop.title": "Team Workshops",
+        "services.workshop.description": "Immersive sessions that equip your team with practical discovery techniques, leading to immediate improvements in idea generation and validation.",
+        "services.design.title": "Discovery Process Design",
+        "services.design.description": "Tailored discovery frameworks that fit your organization's unique context and goals, ensuring a sustainable and effective approach to product discovery.",
+        "services.coaching.title": "Hands-on Coaching",
+        "services.coaching.description": "Direct guidance during live discovery activities, providing real-time feedback and optimization to enhance your team's skills and outcomes.",
+        "about.title": "About Me",
+        "about.description": "With extensive experience at companies like KPN, DPG Media, Ahold-Delhaize, and Sissy-Boy, I bring a wealth of knowledge in product management and coaching to help your team excel in product discovery.",
+        "about.approach": "My approach is rooted in modern product management principles, focusing on creating products that are not just viable, but valuable, usable, and feasible. I believe in the power of effective discovery to drive innovation and create products that truly resonate with customers.",
+        "about.experience": "My diverse background spans both B2B and B2C environments, allowing me to adapt discovery methods to various business models and customer types. Whether you're a startup or an established enterprise, I can help you navigate the complexities of product discovery and drive meaningful results.",
+        "contact.title": "Contact",
+        "contact.cta": "Ready to transform your product discovery?",
+        "contact.description": "Whether you're struggling with product-market fit, looking to innovate in a crowded market, or simply want to make your discovery process more efficient and effective, I'm here to help. Let's work together to uncover opportunities that will delight your customers and drive your business forward.",
+        "contact.button": "Contact Me",
+        "footer.rights": "All rights reserved.",
+        "footer.privacy": "Privacy Policy"
+    },
+    nl: {
+        "nav.home": "Home",
+        "nav.services": "Diensten",
+        "nav.about": "Over mij",
+        "nav.contact": "Contact",
+        "home.title": "Joost Kamstra",
+        "home.subtitle": "Product Discovery Coach",
+        "home.intro": "Als ervaren Product Discovery Coach help ik organisaties bij het creëren van producten die er echt toe doen. Met meer dan tien jaar ervaring in leidende productbedrijven, help ik teams hun product discovery proces te transformeren, wat resulteert in verhoogde waardecreatie en minder verspilling.",
+        "services.title": "Diensten",
+        "services.intro": "Ik bied verschillende diensten aan om uw team te helpen excelleren in product discovery:",
+        "services.workshop.title": "Team Workshops",
+        "services.workshop.description": "Intensieve sessies die uw team uitrusten met praktische discovery-technieken, leidend tot directe verbeteringen in ideeëngeneratie en -validatie.",
+        "services.design.title": "Discovery Proces Ontwerp",
+        "services.design.description": "Op maat gemaakte discovery-raamwerken die passen bij de unieke context en doelen van uw organisatie, voor een duurzame en effectieve benadering van product discovery.",
+        "services.coaching.title": "Hands-on Coaching",
+        "services.coaching.description": "Directe begeleiding tijdens live discovery-activiteiten, met realtime feedback en optimalisatie om de vaardigheden en resultaten van uw team te verbeteren.",
+        "about.title": "Over Mij",
+        "about.description": "Met uitgebreide ervaring bij bedrijven als KPN, DPG Media, Ahold-Delhaize en Sissy-Boy, breng ik een schat aan kennis in productmanagement en coaching mee om uw team te helpen excelleren in product discovery.",
+        "about.approach": "Mijn aanpak is geworteld in moderne productmanagementprincipes, gericht op het creëren van producten die niet alleen levensvatbaar zijn, maar ook waardevol, bruikbaar en haalbaar. Ik geloof in de kracht van effectieve discovery om innovatie te stimuleren en producten te creëren die echt resoneren met klanten.",
+        "about.experience": "Mijn diverse achtergrond omvat zowel B2B- als B2C-omgevingen, waardoor ik discovery-methoden kan aanpassen aan verschillende bedrijfsmodellen en klanttypes. Of u nu een startup bent of een gevestigde onderneming, ik kan u helpen bij het navigeren door de complexiteit van product discovery en het behalen van betekenisvolle resultaten.",
+        "contact.title": "Contact",
+        "contact.cta": "Klaar om uw product discovery te transformeren?",
+        "contact.description": "Of u nu worstelt met product-markt fit, zoekt naar innovatie in een drukke markt, of simpelweg uw discovery-proces efficiënter en effectiever wilt maken, ik ben er om te helpen. Laten we samenwerken om kansen te ontdekken die uw klanten zullen verrassen en uw bedrijf vooruit zullen stuwen.",
+        "contact.button": "Neem Contact Op",
+        "footer.rights": "Alle rechten voorbehouden.",
+        "footer.privacy": "Privacybeleid"
+    }
+  };
 
-header {
-    background-color: var(--bg-color);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const languageButtons = document.querySelectorAll('.language-switch button');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    // Theme toggle
+    themeToggle.addEventListener('click', () => {
+        document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+    // Language switch
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            setLanguage(button.id);
+        });
+    });
 
-nav ul li {
-    margin: 0 1rem;
-}
+    // Set initial language based on browser settings or localStorage
+    const savedLang = localStorage.getItem('preferredLanguage');
+    setLanguage(savedLang || navigator.language.split('-')[0]);
 
-nav ul li a, .language-switch button, #theme-toggle {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
 
-nav ul li a:hover, nav ul li a.active,
-.language-switch button:hover, #theme-toggle:hover {
-    border-color: var(--primary-color);
-    background-color: rgba(52, 152, 219, 0.1);
-}
+    // Fade-in effect
+    const fadeElems = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+    fadeElems.forEach(elem => observer.observe(elem));
 
-.language-switch, #theme-toggle {
-    background: none;
-    cursor: pointer;
-    margin-left: 10px;
-}
+    // Active navigation link
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
-#menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-main {
-    padding: 2rem 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
-}
-
-#home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 4rem;
-    width: 100%;
-}
-
-.home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#home h1, #home h2, #home p {
-    width: 100%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#home h1, #home h2 {
-    margin-bottom: 1rem;
-}
-
-.profile-image {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin: 1rem auto;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
-
-section {
-    margin-bottom: 4rem;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0;
-    list-style-type: none;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-a, .button {
-    color: var(--primary-color);
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-a:hover, .button:hover {
-    color: var(--secondary-color);
-}
-
-.button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: var(--secondary-color);
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
     }
 
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--bg-color);
-        display: none;
-        padding: 1rem;
+    const handleScroll = throttle(() => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll);
+  });
+
+  function setLanguage(lang) {
+    console.log('Language set to:', lang);
+    
+    // Check if the language exists in our translations
+    if (!translations[lang]) {
+        console.error(`Translations for language "${lang}" are not available.`);
+        return;
     }
 
-    nav.active {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .header-buttons {
-        display: flex;
-        align-items: center;
-    }
-}
+    // Update the language for all elements with a data-i18n attribute
