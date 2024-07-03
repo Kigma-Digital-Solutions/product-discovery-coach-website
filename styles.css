@@ -8,14 +8,12 @@
     --accent-color: #e74c3c;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #2c3e50;
-        --text-color: #ecf0f1;
-        --primary-color: #3498db;
-        --secondary-color: #2ecc71;
-        --accent-color: #e74c3c;
-    }
+[data-theme="dark"] {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
 }
 
 .no-js .fade-in {
@@ -216,4 +214,24 @@ footer {
         left: 0;
         right: 0;
         background-color: var(--bg-color);
-        display
+        display: none;
+        padding: 1rem;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+    }
+}
